@@ -19,9 +19,14 @@
     </div> <br>
     <div align="center" class="inputlistzone">
         입력한 값을 출력합니다 <br>
-        <span th:if="${inputnumberinformations}" th:each="inputnumberinformation : ${inputnumberinformations}">
+        <span th:if="${restart} == 0" th:each="inputnumberinformation : ${inputnumberinformations}">
             <span th:text="${inputnumberinformation}">값을 입력해주세요</span> <br>
         </span>
+    </div> <br><br>
+
+    <div class = "restartzone">
+        <button th:if="${restart} == 1" th:onclick="|location.href='@{/}'|"}>REGAME</button><br>
+        <span th:if="${restart} == 1">😎😎😎정답입니다!😎😎😎</span>
     </div>
 
 
