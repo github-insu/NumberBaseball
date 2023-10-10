@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 align="center"> [쪼깐이를 위한 Baseball Game Site!!!] </h1> <br>
+
+<div align="center" class="gamezone">
+    <div align="center" class="inputzone">
+        값을 입력하세요 :
+        <form action="/inputvalue" method="post">
+            <input type="number" name="inputvalue" min="001" max="999">
+            <button type="submit">제출</button>
+
+        </form>
+    </div> <br>
+    <div align="center" class="inputlistzone">
+        입력한 값을 출력합니다 <br>
+        <span th:if="${inputnumberinformations}" th:each="inputnumberinformation : ${inputnumberinformations}">
+            <span th:text="${inputnumberinformation}">값을 입력해주세요</span> <br>
+        </span>
+    </div>
+
+
+</div>
+
+</body>
+</html>
